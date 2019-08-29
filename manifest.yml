@@ -1,0 +1,13 @@
+---
+applications:
+  - name: cat-app
+    buildpacks:
+      - https://github.com/cloudfoundry/java-buildpack.git
+    instances: 1
+    path: target/sb-demo-0.0.1-SNAPSHOT.jar
+    services:
+      - cat-db
+    env:
+      DEBUG: "true"
+      SPRING_PROFILES_ACTIVE: cloud
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 12.+}}'

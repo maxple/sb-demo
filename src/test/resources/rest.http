@@ -1,0 +1,34 @@
+GET http://{{host}}{{port}}/cats?page=0&size=22
+
+###
+
+POST http://{{host}}{{port}}/cats
+Content-Type: application/json;charset=UTF-8
+
+{
+    "name": "Bob"
+}
+
+###
+
+POST http://{{host}}{{port}}/cats
+Content-Type: application/json;charset=UTF-8
+
+{
+    "name": "Tom"
+}
+
+###
+
+POST http://{{host}}{{port}}/cats
+Content-Type: application/json;charset=UTF-8
+
+{
+    "name": "Whisper"
+}
+
+###
+
+DELETE http://{{host}}{{port}}/cats/62
+
+###
