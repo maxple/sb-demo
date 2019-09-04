@@ -1,5 +1,6 @@
 package com.maxple.sbdemo;
 
+import com.maxple.sbdemo.config.ApplicationConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
@@ -7,7 +8,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(SbDemoApplication.class);
+		return application.sources(ApplicationConfiguration.class);
 	}
 
 }
